@@ -1,12 +1,14 @@
 <?php
 /*
 Plugin name: Items Left
-Plugin URI: www.ianfmacdonald.com
-Description: Add Jdavis items styles to your wordpress page
+Plugin URI: https://github.com/underwoodno5/itemsplugin
+Description: Add a featured item, with image and description
 Version: 1.0
 Author: ianmac
-Author URI: http://www.ianfmacdonald.com
+Author URI: http://ianmacs.site
 License: none
+Text Domain: items_left
+
 */
 
 class jdl_widget extends WP_Widget
@@ -19,7 +21,7 @@ class jdl_widget extends WP_Widget
             'description' => 'Creates a right-oriented item box.'
         );
 
-		parent::__construct( 'jdl_widget', 'JD Items Left', $widget_details );
+		parent::__construct( 'jdl_widget', 'Items Left', $widget_details );
 
 
 		add_action( 'admin_enqueue_scripts', 'load_wp_media_files' );

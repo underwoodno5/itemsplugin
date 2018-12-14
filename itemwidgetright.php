@@ -2,11 +2,11 @@
 /*
 Plugin Name: Items Right
 Version: 1.0
-Plugin URI: http://danielpataki.com
-Description: Allows you to add an arbitrary featured item to the sidebar. Includes a title, image, description and a link.
-Author: Daniel Pataki
-Author URI: http://danielpataki.com/
-Text Domain: my_featured_content
+Plugin URI: https://github.com/underwoodno5/itemsplugin
+Description: Add a featured item, with image and description
+Author: Ian Mac
+Author URI: http://ianmacs.site
+Text Domain: items_right
 */
 
 add_action( 'widgets_init', 'jdr_init' );
@@ -25,7 +25,7 @@ class jdr_widget extends WP_Widget
             'description' => 'Creates a right-oriented item box.'
         );
 
-        parent::__construct( 'jdr_widget', 'JD Items Right', $widget_details );
+        parent::__construct( 'jdr_widget', 'Items Right', $widget_details );
 
         add_action('admin_enqueue_scripts', array($this, 'jdr_assets'));
     }
